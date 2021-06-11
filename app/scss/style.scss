@@ -1,0 +1,574 @@
+@import "libs/include-media";
+@import "vars";
+@import "fonts";
+@import "global";
+
+.navbar {
+  padding: 0;
+  border: 1px solid #ffffff;
+  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.1);
+  &-row {
+    flex-wrap: nowrap;
+    width: 100%;
+    @include media("<xl") {
+      flex-wrap: wrap;
+    }
+  }
+  &-brand-img {
+    width: 105px;
+  }
+  &-toggler {
+    width: 55px;
+  }
+}
+
+.nav-item {
+  padding-left: 30px;
+  @include media("<ipad-pro") {
+    padding: 0;
+  }
+}
+
+.nav-link {
+  color: var(--main-text-color);
+  font-size: 17px;
+  padding: 3px 15px;
+  border: 2px solid transparent;
+  &:hover,
+  &.active {
+    border: 2px solid #eaedf5 !important;
+    border-radius: 8px;
+    color: #2e75ff !important;
+    svg {
+      stroke: #2e75ff !important;
+    }
+  }
+  svg {
+    margin-left: 2px;
+    stroke: #45494f;
+  }
+}
+
+.about-product {
+  padding: 103px 0 67px 0;
+  @include media("<xl") {
+    padding: 40px 0 40px 0;
+  }
+  &-row {
+    &:last-child {
+      padding-top: 86px;
+      @include media("<xl") {
+        padding-top: 140px;
+      }
+      @include media("<lg") {
+        padding-top: 20px;
+      }
+    }
+    &:first-child {
+      font-weight: 600;
+      @include media("<lg") {
+        .about-product-descr {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &-h1 {
+    padding-bottom: 32px;
+    @include media("<xl") {
+      text-align: center;
+      padding-bottom: 0;
+    }
+  }
+  &-text-block {
+    padding-right: 35px;
+    @include media("<md") {
+      padding: 0;
+    }
+  }
+  &-descr {
+    font-size: 17px;
+    line-height: 188%;
+    letter-spacing: -0.4px;
+    color: var(--bold-text-color);
+  }
+  &-line {
+    width: 227px;
+    height: 7px;
+    background-color: #edeff3;
+    margin: 55px 0;
+    @include media("<xl") {
+      margin: 30px auto;
+    }
+    @include media("<md") {
+      margin: 30px auto 325px;
+    }
+    &:last-child {
+      @include media("<xl") {
+        display: none;
+      }
+    }
+  }
+  &-img-block {
+    position: relative;
+  }
+  &-img-first,
+  &-img-second {
+    position: absolute;
+    z-index: -1;
+  }
+  &-img-first {
+    top: -70px;
+    left: 0;
+    width: 100%;
+    @include media("<lg") {
+      top: 0;
+    }
+    @include media("<md") {
+      top: -470px;
+      width: 100%;
+      max-height: 354px;
+      object-fit: contain;
+    }
+    @include media("<sm") {
+      top: -515px;
+      max-width: 350px;
+    }
+  }
+  &-img-second {
+    left: -110px;
+    @include media("<xl") {
+      position: relative;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+  &-h2 {
+    @include media("<sm") {
+      text-align: center;
+    }
+  }
+}
+
+.standards {
+  color: white;
+  background: linear-gradient(180deg, #163da2 0%, #003584 100%);
+  height: 728px;
+  @include media("<xl") {
+    height: auto;
+  }
+  &-img-block {
+    position: relative;
+  }
+  &-img {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    @include media("<xl") {
+      height: 477px;
+    }
+    @include media("<lg") {
+      position: relative;
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  }
+  &-text-block {
+    padding: 170px 140px 144px 187px;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 32px;
+    color: var(--light-text-color);
+    @include media("<xl") {
+      padding: 39px 15px 40px 0;
+      height: 447px;
+    }
+    @include media("<lg") {
+      padding-bottom: 0;
+      height: auto;
+    }
+    @include media("<md") {
+      font-size: 16px;
+      padding: 20px 0 0;
+    }
+  }
+  &-h2 {
+    padding-bottom: 22px;
+    color: var(--light-text-color);
+  }
+  &-descr {
+    @include media("<sm") {
+      letter-spacing: -0.4px;
+    }
+  }
+}
+
+.specialty {
+  padding: 91px 0;
+  background: url("../images/IconHotToCold.png") no-repeat center right;
+  @include media("<xl") {
+    background: url("../images/IconHotToCold.png") no-repeat right -280px;
+    padding: 0;
+  }
+  @include media("<lg") {
+    background: url("../images/IconHotToCold2.png") no-repeat right -155px;
+  }
+  .container {
+    position: relative;
+  }
+  &-text-block {
+    padding-right: 65px;
+    @include media("<xl") {
+      padding-top: 280px;
+    }
+    @include media("<lg") {
+      padding-top: 0;
+    }
+    @include media("<md") {
+      padding-top: 280px;
+    }
+    @include media("<sm") {
+      padding-right: 0;
+    }
+  }
+  &-descr {
+    font-size: 17px;
+    line-height: 32px;
+    margin: 0;
+    padding-bottom: 20px;
+    @include media("<sm") {
+      font-size: 16px;
+    }
+  }
+  &-h2 {
+    padding-bottom: 40px;
+    @include media("<sm") {
+      text-align: center;
+    }
+  }
+}
+
+.product-details {
+  background: #fbfbfc;
+  .h2 {
+    text-align: center;
+    color: #020303;
+  }
+}
+
+.advantages {
+  &-wrap {
+    padding: 67px 0 57px;
+    @include media("<xl") {
+      padding: 27px 0 57px;
+    }
+  }
+  .col {
+    width: 33%;
+    margin-bottom: 0.5%;
+    @include media("<desktop") {
+      width: 49%;
+      margin-bottom: 2%;
+    }
+    @include media("<sm") {
+      width: 100%;
+      margin-bottom: 2%;
+    }
+  }
+  &-h2 {
+    padding-bottom: 42px;
+    @include media("<lg") {
+      font-size: 20px;
+    }
+  }
+  &-item {
+    min-height: 136px;
+    padding-right: 90px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    background-color: white;
+    @include media("<xl") {
+      padding-right: 20px;
+    }
+  }
+  &-icon-block {
+    width: 35%;
+    text-align: center;
+  }
+  &-text-block {
+    width: 65%;
+  }
+  &-text {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    margin: 0;
+    @include media("<lg") {
+      padding-right: 18px;
+      font-size: 18px;
+    }
+    @include media("<sm") {
+      padding-right: 0;
+      font-size: 18px;
+    }
+  }
+}
+
+.characteristics {
+  &-wrap {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 43px 54px 71px 52px;
+    background-color: white;
+    @include media("<md") {
+      padding: 43px 15px 43px 15px;
+    }
+  }
+  &-h2 {
+    padding-bottom: 71px;
+    @include media("<lg") {
+      font-size: 20px;
+    }
+    @include media("<md") {
+      padding-bottom: 30px;
+    }
+  }
+  &-list {
+    columns: 2;
+    @include media("<md") {
+      columns: 1;
+    }
+    li {
+      padding-right: 45px;
+      padding-bottom: 25px;
+      font-size: 17px;
+      line-height: 35px;
+      letter-spacing: -0.4px;
+      @include media("<lg") {
+        font-size: 16px;
+      }
+      @include media("<md") {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.slider {
+  &-row {
+    padding: 74px 0 78px;
+    @include media("<xl") {
+      padding: 32px 0 32px;
+    }
+  }
+  &-h2 {
+    padding-bottom: 31px;
+    @include media("<lg") {
+      font-size: 20px;
+    }
+  }
+  &-block {
+    padding: 0 46px;
+    margin-bottom: 100px;
+    @include media("<lg") {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    bottom: -100px;
+    top: auto;
+    width: 126px;
+    height: 78px;
+    background: #ffffff;
+    box-shadow: 0px 0px 21px rgba(64, 68, 75, 0.14);
+    border-radius: 8px;
+    opacity: 1;
+    @include media("<lg") {
+      display: none;
+    }
+  }
+  .carousel-control-next {
+    left: 150px;
+    &-icon {
+      background-image: url("../images/icons/arrow_right2.svg");
+    }
+  }
+  .carousel-control-prev {
+    &-icon {
+      background-image: url("../images/icons/arrow_left2.svg");
+    }
+  }
+  .carousel-indicators {
+    bottom: -50px;
+    left: 120px;
+    @include media("<xl") {
+      left: auto;
+      right: -40px;
+    }
+    @include media("<lg") {
+      left: 0;
+      right: 0;
+    }
+    [data-bs-target] {
+      width: 12px;
+      height: 12px;
+      background: linear-gradient(180deg, #005be4 0%, rgba(0, 96, 241, 0) 100%),
+        #004fc7;
+      border: 1px solid #bed8ff;
+      border-radius: 50%;
+      margin-right: 26px;
+      @include media("<lg") {
+        width: 9px;
+        height: 9px;
+        margin: 0 11px;
+      }
+    }
+  }
+}
+
+.similar {
+  padding-bottom: 82px;
+  @include media("<xl") {
+    padding-bottom: 60px;
+  }
+  &-h2 {
+    padding-bottom: 31px;
+    @include media("<lg") {
+      font-size: 20px;
+    }
+  }
+  .col {
+    width: 33%;
+    margin-bottom: 1%;
+    @include media("<desktop") {
+      width: 49%;
+    }
+    @include media("<phone") {
+      width: 100%;
+    }
+  }
+  &-link {
+    font-family: "BBC Reith Sans";
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 40px;
+    letter-spacing: 1.42px;
+    text-transform: uppercase;
+    padding: 10px;
+    @include media("<lg") {
+      font-size: 16px;
+    }
+  }
+}
+
+.contacts {
+  padding: 73px 0 147px;
+  border: 2px solid #eef0f4;
+  @include media("<xxl") {
+    padding: 73px 0 47px;
+  }
+  @include media("<xl") {
+    padding: 48px 0 10px;
+  }
+  &-h3 {
+    color: var(--blue-text-color);
+  }
+  p {
+    padding-bottom: 20px;
+  }
+  &-text-block {
+    position: relative;
+  }
+  &-email-block {
+    padding-bottom: 7px;
+  }
+  &-logo-block {
+    @include media("<xl") {
+      text-align: center;
+      padding-bottom: 27px;
+    }
+  }
+  &-btn {
+    position: absolute;
+    width: 306px;
+    height: 69px;
+    font-family: "BBC Reith Sans";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    padding: 21px 28px;
+    @include media("<xxl") {
+      position: relative;
+    }
+    @include media("<sm-phone") {
+      width: 100%;
+    }
+  }
+}
+
+.address {
+  flex-wrap: wrap;
+  a {
+    text-decoration: none;
+  }
+  &-tel {
+    a {
+      color: #9eabbb;
+      font-weight: 500;
+    }
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: #a3adba;
+  }
+}
+
+.footer {
+  padding: 50px 0 54px;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  color: #9eabbb;
+  @include media("<desktop") {
+    padding: 45px 0 45px;
+  }
+  p {
+    margin: 0;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: #a3adba;
+  }
+  &-links {
+    columns: 2;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include media("<sm") {
+      columns: 1;
+    }
+    a {
+      color: inherit;
+      text-decoration-line: underline;
+    }
+  }
+  &-link {
+    &:nth-child(n + 3) {
+      text-align: end;
+      @include media("<xl") {
+        text-align: start;
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 17px;
+  color: var(--main-text-color);
+  @include media("<lg") {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 1444px;
+  padding: 0 120px;
+  @include media("<ipad-pro") {
+    padding: 15px;
+  }
+  @include media("<xs-phone") {
+    padding: 8px;
+  }
+}
+
+.row {
+  margin: 0;
+  --bs-gutter-x: 0;
+}
+
+.h1 {
+  margin: 0;
+  font-family: "BBC Reith Sans";
+  font-weight: bold;
+  font-size: 48px;
+  letter-spacing: -0.4px;
+  color: var(--blue-text-color);
+  @include media("<xl") {
+    font-size: 34px;
+  }
+}
+
+.h2 {
+  margin: 0;
+  font-family: "BBC Reith Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2.42px;
+  text-transform: uppercase;
+  line-height: 40px;
+  color: var(--blue-text-color);
+  @include media("<lg") {
+    font-size: 18px;
+  }
+}
+
+.h3 {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 43px;
+  letter-spacing: -0.4px;
+  @include media("<lg") {
+    font-size: 26px;
+    letter-spacing: -0.4px;
+  }
+}
+
+.numbered-list {
+  counter-reset: li;
+  list-style-type: none;
+  li {
+    position: relative;
+    padding: 5px 0 5px 30px;
+    &:before {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      content: counter(li);
+      counter-increment: li;
+      font-size: 12px;
+      height: 15px;
+      width: 15px;
+      border: 1px solid var(--main-text-color);
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 15px;
+    }
+  }
+}
+
+.btn-primary {
+  color: #fafbfe;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  background: linear-gradient(180deg, #0c5cd6 0%, rgba(0, 56, 140, 0) 100%),
+    #004fc7;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.21);
+  border-radius: 12px;
+}
+
+.italics {
+  font-style: italic;
+}
+
+//right arrow
+.arrow-right {
+  position: absolute;
+  top: -6px;
+  left: -20px;
+  width: 80px;
+  height: 50px;
+  margin: 20px;
+  span {
+    position: relative;
+    top: 20px;
+    width: 79px;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    display: block;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      top: -3px;
+      right: -1px;
+      background-color: white;
+      transform: rotate(45deg);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      top: 3px;
+      right: -1px;
+      background-color: white;
+      transform: rotate(-45deg);
+    }
+  }
+}
