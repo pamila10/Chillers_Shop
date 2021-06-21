@@ -446,7 +446,7 @@
   }
   &-link {
     width: 33%;
-    margin-bottom: 1%;
+    margin-bottom: 0.3%;
     margin-left: 0.3%;
     font-family: "BBC Reith Sans";
     font-weight: 500;
@@ -460,6 +460,7 @@
     }
     @include media("<desktop") {
       width: 49%;
+      margin-bottom: 1%;
       margin-left: 1%;
     }
     @include media("<phone") {
