@@ -265,18 +265,6 @@
       padding: 27px 0 57px;
     }
   }
-  .col {
-    width: 33%;
-    margin-bottom: 0.5%;
-    @include media("<desktop") {
-      width: 49%;
-      margin-bottom: 2%;
-    }
-    @include media("<sm") {
-      width: 100%;
-      margin-bottom: 2%;
-    }
-  }
   &-h2 {
     padding-bottom: 42px;
     @include media("<lg") {
@@ -284,6 +272,9 @@
     }
   }
   &-item {
+    display: flex;
+    width: 33%;
+    margin-bottom: 0.5%;
     min-height: 136px;
     padding-right: 90px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
@@ -291,6 +282,14 @@
     background-color: white;
     @include media("<xl") {
       padding-right: 20px;
+    }
+    @include media("<desktop") {
+      width: 49%;
+      margin-bottom: 2%;
+    }
+    @include media("<sm") {
+      width: 100%;
+      margin-bottom: 2%;
     }
   }
   &-icon-block {
@@ -442,17 +441,13 @@
       font-size: 20px;
     }
   }
-  .col {
-    width: 33%;
-    margin-bottom: 1%;
-    @include media("<desktop") {
-      width: 49%;
-    }
-    @include media("<phone") {
-      width: 100%;
-    }
+  &-links-block {
+    margin-left: -0.3%;
   }
   &-link {
+    width: 33%;
+    margin-bottom: 1%;
+    margin-left: 0.3%;
     font-family: "BBC Reith Sans";
     font-weight: 500;
     font-size: 17px;
@@ -462,6 +457,14 @@
     padding: 10px;
     @include media("<lg") {
       font-size: 16px;
+    }
+    @include media("<desktop") {
+      width: 49%;
+      margin-left: 1%;
+    }
+    @include media("<phone") {
+      width: 100%;
+      margin-left: 0;
     }
   }
 }
